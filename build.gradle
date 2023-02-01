@@ -89,6 +89,15 @@ task HappyPaths(type: Test) {
 
 }
 
+task regression(type: Test) {
+    testLogging.showStandardStreams = true
+    // maxParallelForks = 4
+    systemProperty "cucumber.filter.tags", System.getProperty('cucumber.filter.tags')
+    systemProperty("tags", "regression")
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+
+}
 serenity {
     reports = ["single-page-html"]
 }

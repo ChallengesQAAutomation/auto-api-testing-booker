@@ -32,7 +32,7 @@ public class FindByCheckin implements Task {
                                 .queryParam("chekin",responseBooking.getBooking().getBookingdates().getCheckin())));
         response= SerenityRest.lastResponse().asString();
         actor.attemptsTo(Ensure.that(response).contains(responseBooking.getBookingid()+""));
-        logger.info("Buscando por nombre......");
+        logger.info("Buscando por fecha de llegada......");
 
     }
 }

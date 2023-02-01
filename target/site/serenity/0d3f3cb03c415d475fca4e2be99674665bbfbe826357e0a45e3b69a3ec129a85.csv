@@ -1,4 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Servicio web de Gestion de reservas","Actualizacion total de reserva para cliente","SUCCESS","2023-01-31T20:40:15.527679-05:00[America/Bogota]","0.0","0.04"
-"Servicio web de Gestion de reservas","Creacion, modificacion, busqueda y eliminacion de la misma reserva","SUCCESS","2023-02-01T00:02:20.635458-05:00[America/Bogota]","0.0","20.78"
-"Servicio web de Gestion de reservas","Creacion, busqueda de una reserva usando la fecha de checkin","SUCCESS","2023-02-01T00:02:41.426146-05:00[America/Bogota]","0.0","6.16"
+"Servicio web de Gestion de reservas","Creacion, modificacion, busqueda y eliminacion de la misma reserva","SUCCESS","2023-02-01T00:14:51.71337-05:00[America/Bogota]","0.0","28.72"
+"Servicio web de Gestion de reservas","Creacion y busqueda de una reserva usando el apellido del cliente","SUCCESS","2023-02-01T00:15:20.459854-05:00[America/Bogota]","0.0","1.82"
+"Servicio web de Gestion de reservas","Creacion, busqueda de una reserva usando la fecha de checkin","SUCCESS","2023-02-01T00:15:22.301538-05:00[America/Bogota]","0.0","5.34"
+"Servicio web de Gestion de reservas","Actualizacion total de reserva para cliente","SUCCESS","2023-02-01T00:15:27.646819-05:00[America/Bogota]","0.0","0.53"

@@ -16,7 +16,7 @@ import static util.Contants.RESPONSE_BOOKING;
 
 public class FindByLastName implements Task {
     ResponseBooking responseBooking;
-    String response,name;
+    String response;
     public FindByLastName() {
     }
 
@@ -28,12 +28,11 @@ public class FindByLastName implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         responseBooking=actor.recall(RESPONSE_BOOKING);
-        name=actor.recall(NAME_UPDATED);
         actor.attemptsTo(Get.resource("/booking").with(resquest->resquest
-                                .queryParam("firstname",name)));
+                                .queryParam("lastname",responseBooking.getBooking().getLastname())));
         response= SerenityRest.lastResponse().asString();
         actor.attemptsTo(Ensure.that(response).contains(responseBooking.getBookingid()+""));
-        logger.info("Buscando por nombre......");
+        logger.info("Buscando por apellido......");
 
     }
 }
