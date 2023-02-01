@@ -20,7 +20,7 @@ Feature: Servicio web de Gestion de reservas
   @UnhappyPaths
   Scenario Outline: Creacion y busqueda de una reserva usando el nombre del cliente
     Given que el usuario admin crea una reserva para un cliente llega el <checkin> y se va el <checkout> con un <additionalneeds>
-    Then el sistema debera de traer la reserva cuando la busca con filtro de nombre
+    Then el sistema debera de traer la reserva cuando la busca con filtro de apellido
     Then el usuario admin elimina la reserva
     Examples:
       |checkin|checkout|additionalneeds|

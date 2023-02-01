@@ -4,10 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import task.booking.DeleteBooking;
-import task.booking.FindById;
-import task.booking.FindByName;
-import task.booking.UpdateNameClient;
+import task.booking.*;
 
 import static stepdefinition.SetupStepDefinition.admin;
 import static task.booking.CreateBooking.createBooking;
@@ -47,7 +44,7 @@ public class BookingStepDefinition {
 
     @Then("el sistema debera de traer la reserva cuando la busca con filtro de checkin")
     public void elSistemaDeberaDeTraerLaReservaCuandoLaBuscaConFiltroDeCheckin() {
-        
+        admin.attemptsTo(FindByCheckin.ofBooking());
     }
 
     @Given("que el usuario admin obtiene el bookingId de una reserva existente")
