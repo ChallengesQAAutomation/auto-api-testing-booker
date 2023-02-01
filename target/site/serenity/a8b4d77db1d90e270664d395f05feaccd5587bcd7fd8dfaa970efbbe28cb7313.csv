@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
 "Servicio web de Gestion de reservas","Creacion, busqueda de una reserva usando la fecha de checkin","PENDING","2023-01-31T22:53:02.303752-05:00[America/Bogota]","0.0","2.57"
-"Servicio web de Gestion de reservas","Creacion, modificacion, busqueda y eliminacion de la misma reserva","ERROR","2023-01-31T23:33:39.939507-05:00[America/Bogota]","0.0","11.08"
+"Servicio web de Gestion de reservas","Creacion, modificacion, busqueda y eliminacion de la misma reserva","SUCCESS","2023-01-31T23:56:22.436167-05:00[America/Bogota]","0.0","24.34"

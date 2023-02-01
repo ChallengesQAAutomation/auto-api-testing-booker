@@ -12,13 +12,13 @@ import org.apache.logging.log4j.Logger;
 
 import static io.restassured.path.json.JsonPath.from;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static util.Contants.NAME_UPDATED;
 import static util.Contants.RESPONSE_BOOKING;
 
 
 public class FindByName implements Task {
     ResponseBooking responseBooking;
-    ResponseBookingFind responseBookingFind;
-    String response;
+    String response,name;
     public FindByName() {
     }
 
@@ -30,11 +30,11 @@ public class FindByName implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         responseBooking=actor.recall(RESPONSE_BOOKING);
+        name=actor.recall(NAME_UPDATED);
         actor.attemptsTo(Get.resource("/booking").with(resquest->resquest
-                                .queryParam("name",responseBooking.getBooking().getFirstname())));
+                                .queryParam("firstname",name)));
         response= SerenityRest.lastResponse().asString();
-        responseBookingFind= from(response).getObject("",ResponseBookingFind.class);
-        actor.attemptsTo(Ensure.that(responseBooking.getBookingid()).isEqualTo(responseBookingFind.getResponseBookingFind().get(0).getBookingid()));
+        actor.attemptsTo(Ensure.that(response).contains(responseBooking.getBookingid()+""));
         logger.info("Buscando por nombre......");
 
     }

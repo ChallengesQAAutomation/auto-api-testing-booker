@@ -1,15 +1,11 @@
 package task.booking;
 
 import io.restassured.http.Cookie;
-import model.Booking.request.RequestBooking;
-import model.Booking.response.ResponseBooking;
 import model.Booking.response.update.ResponseBookingUpdate;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.rest.interactions.Patch;
-import net.serenitybdd.screenplay.rest.interactions.Post;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -48,7 +44,7 @@ public class UpdateNameClient implements Task {
         cookie = new Cookie.Builder("token", token).build();
         actor.attemptsTo(
                 Patch.to("/booking/"+bookingId)
-                        .with(requestSpec -> requestSpec.
+                        .with(request -> request.
                                 cookie(cookie).
                                 header("Content-Type", "application/json")
                                .body(requestBooking).log().all()
@@ -56,6 +52,7 @@ public class UpdateNameClient implements Task {
         );
         response= SerenityRest.lastResponse().asString();
         responseBooking= from(response).getObject("",ResponseBookingUpdate.class);
+        actor.remember(NAME_UPDATED,name);
         logger.info("Actualizado el nombre de la reserva");
 
     }

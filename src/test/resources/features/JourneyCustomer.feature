@@ -12,9 +12,9 @@ Feature: Servicio web de Gestion de reservas
     Then el usuario admin elimina la reserva
      Examples:
      |checkin|checkout|additionalneeds|name|
-     |2023-02-02|2023-02-12|BreakFast|Luis Carlos|
-    # |2021-12-02|2023-11-12|Rent Car|Lorenzo|
-   #  |2022-21-02|2023-02-10|Pool|Arya|
+     |2023-02-02|2023-02-12|BreakFast|Joaquin|
+     |2021-12-02|2023-11-12|Rent Car|Lorenzo|
+     |2022-21-02|2023-02-10|Pool|Arya|
 
 
   @UnhappyPaths
@@ -26,13 +26,15 @@ Feature: Servicio web de Gestion de reservas
       |checkin|checkout|additionalneeds|
       |"2023-02-02"|"2023-02-12"|"BreakFast"|
 
-
+  @HappyPaths
   Scenario Outline: Creacion, busqueda de una reserva usando la fecha de checkin
-    Given que el usuario admin crea una reserva para un cliente llega el <checkin> y se va el <checkout> con un <additionalneeds>
+    Given que el usuario admin crea una reserva para un cliente llega el "<checkin>" y se va el "<checkout>" con un "<additionalneeds>"
     Then el sistema debera de traer la reserva cuando la busca con filtro de checkin
     Examples:
       |checkin|checkout|additionalneeds|
-      |"2023-02-02"|"2023-02-12"|"BreakFast"|
+      |2013-02-02|2023-02-12|Lunch|
+      |1021-12-02|2023-11-12|Sea|
+      |0022-21-02|2023-02-10|Beer|
 
   @UnhappyPaths
   Scenario: Actualizacion total de reserva para cliente

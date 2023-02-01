@@ -1,5 +1,6 @@
 package task.booking;
 
+import io.restassured.http.Cookie;
 import model.Booking.response.ResponseBooking;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
@@ -17,6 +18,8 @@ import static util.Contants.*;
 public class DeleteBooking implements Task {
 
     Integer bookingId;
+    String token;
+    Cookie cookie;
     public DeleteBooking() {
     }
 
@@ -30,11 +33,16 @@ public class DeleteBooking implements Task {
 
     public <T extends Actor> void performAs(T actor) {
         bookingId=actor.recall(BOOKINGID);
+        token=actor.recall(TOKEN);
+        cookie = new Cookie.Builder("token", token).build();
         actor.attemptsTo(
                 Delete.from("/booking/"+bookingId)
-                        .with(request -> request.header("Content-Type", "application/json")
+                        .with(request -> request.
+                                cookie(cookie).
+                                header("Content-Type", "application/json")
                         )
         );
+
         actor.attemptsTo(Ensure.that(SerenityRest.lastResponse().asString()).contains(MESSAGE_DELETE));
         actor.attemptsTo(Ensure.that(SerenityRest.lastResponse().statusCode()).isEqualTo(201));
         logger.info("eliminada la reserva");

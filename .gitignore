@@ -18,10 +18,13 @@
 *.zip
 *.tar.gz
 *.rar
-.gradle/
-.idea/
-build/
-history/
-target/
+.gradle
+.idea
+build
+target/*
+/target
+/history
+/build
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
