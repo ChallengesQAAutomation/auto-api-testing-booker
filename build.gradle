@@ -70,29 +70,20 @@ test {
     systemProperties System.getProperties()
 
 }
-task smoke(type: Test) {
-    testLogging.showStandardStreams = true
-    //maxParallelForks = 3
-    systemProperty "cucumber.filter.tags", System.getProperty('cucumber.filter.tags')
-    systemProperty("tags", "smoke")
-    testLogging.showStandardStreams = true
-    systemProperties System.getProperties()
 
-}
-
-task regression(type: Test) {
+task UnhappyPaths(type: Test) {
     testLogging.showStandardStreams = true
     // maxParallelForks = 4
     systemProperty "cucumber.filter.tags", System.getProperty('cucumber.filter.tags')
-    systemProperty("tags", "regression")
+    systemProperty("tags", "UnhappyPaths")
     systemProperties System.getProperties()
 }
 
-task issue(type: Test) {
+task HappyPaths(type: Test) {
     testLogging.showStandardStreams = true
     // maxParallelForks = 4
     systemProperty "cucumber.filter.tags", System.getProperty('cucumber.filter.tags')
-    systemProperty("tags", "issue")
+    systemProperty("tags", "HappyPaths")
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
 
