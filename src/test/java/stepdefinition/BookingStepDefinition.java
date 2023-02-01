@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import task.booking.UpdateNameClient;
 
 import static stepdefinition.SetupStepDefinition.admin;
 import static task.booking.CreateBooking.createBooking;
@@ -13,15 +14,14 @@ public class BookingStepDefinition {
     public void queElUsuarioAdminCreaUnaReservaParaUnClienteLlegaElCheckinYSeVaElCheckoutConUnAdditionalneeds(String checkin,String checkout,String additionalneeds) {
         admin.attemptsTo(createBooking().withAdditionalneeds(additionalneeds).withCheckout(checkout).withChekin(checkin));
     }
-
-
     @Then("el sistema debera de traer la reserva cuando la busca con filtro de nombre")
     public void elSistemaDeberaDeTraerLaReservaCuandoLaBuscaConFiltroDeNombre() {
 
     }
 
     @When("el usuario admin corrige el (.*) del cliente")
-    public void elUsuarioAdminCorrigueElLastnameDelCliente(String lastname) {
+    public void elUsuarioAdminCorrigueElLastnameDelCliente(String name) {
+        admin.attemptsTo(UpdateNameClient.ofBooking().withName(name));
     }
 
     @Then("el sistema debera de traer la reserva cuando la busca con filtro de apellido")
