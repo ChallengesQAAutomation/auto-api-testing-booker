@@ -81,10 +81,10 @@ gradle clean UnhappyPaths aggregate
 
 > report
 ```
-/auto-api-testing/target/site/serenity/serenity-summary.html
+./target/site/serenity/serenity-summary.html
 ```
 
 > aggregate
 ```
-/auto-api-testing/target/site/serenity/index.html
+./target/site/serenity/index.html
 ```
