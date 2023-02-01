@@ -17,13 +17,12 @@ public class HealthCheck implements Task {
     public HealthCheck() {
     }
 
-    public static HealthCheck verifyServices() {
+    public static HealthCheck consumePingServices() {
         return instrumented(HealthCheck.class);
     }
     private static final Logger logger = LogManager.getLogger(HealthCheck.class);
 
     @Override
-
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(Get.resource("/ping"));
