@@ -5,10 +5,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static stepdefinition.SetupStepDefinition.admin;
+import static task.booking.CreateBooking.createBooking;
+
 public class BookingStepDefinition {
     @Given("que el usuario admin crea una reserva para un cliente llega el (.*) y se va el (.*) con un (.*)")
     public void queElUsuarioAdminCreaUnaReservaParaUnClienteLlegaElCheckinYSeVaElCheckoutConUnAdditionalneeds(String checkin,String checkout,String additionalneeds) {
-
+        admin.attemptsTo(createBooking().withAdditionalneeds(additionalneeds).withCheckout(checkout).withChekin(checkin));
     }
 
 
