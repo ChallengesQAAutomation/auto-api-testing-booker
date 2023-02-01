@@ -38,7 +38,7 @@ public class RequestBooking{
 
 	public static class Builder {
 		final Faker faker = new Faker(Locale.ENGLISH);
-		private String firstnameBuild= String.valueOf(faker.name());
+		private String firstnameBuild= faker.gameOfThrones().dragon();
 		private String additionalneedsBuild;
 		private Bookingdates bookingdatesBuild;
 		private int totalpriceBuild=faker.number().numberBetween(4,5);

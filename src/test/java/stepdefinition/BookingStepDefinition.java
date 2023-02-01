@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import task.booking.DeleteBooking;
 import task.booking.FindById;
 import task.booking.FindByName;
 import task.booking.UpdateNameClient;
@@ -12,9 +13,11 @@ import static stepdefinition.SetupStepDefinition.admin;
 import static task.booking.CreateBooking.createBooking;
 
 public class BookingStepDefinition {
-    @Given("que el usuario admin crea una reserva para un cliente llega el (.*) y se va el (.*) con un (.*)")
-    public void queElUsuarioAdminCreaUnaReservaParaUnClienteLlegaElCheckinYSeVaElCheckoutConUnAdditionalneeds(String checkin,String checkout,String additionalneeds) {
+
+    @Given("que el usuario admin crea una reserva para un cliente llega el {string} y se va el {string} con un {string}")
+    public void queElUsuarioAdminCreaUnaReservaParaUnClienteLlegaElYSeVaElConUn(String checkin,String checkout,String additionalneeds) {
         admin.attemptsTo(createBooking().withAdditionalneeds(additionalneeds).withCheckout(checkout).withChekin(checkin));
+
     }
     @Then("el sistema debera de traer la reserva cuando la busca con filtro de nombre")
     public void elSistemaDeberaDeTraerLaReservaCuandoLaBuscaConFiltroDeNombre() {
@@ -22,7 +25,7 @@ public class BookingStepDefinition {
 
     }
 
-    @When("el usuario admin corrige el (.*) del cliente")
+    @When("el usuario admin corrige el {string} del cliente")
     public void elUsuarioAdminCorrigueElLastnameDelCliente(String name) {
         admin.attemptsTo(UpdateNameClient.ofBooking().withName(name));
     }
@@ -39,7 +42,7 @@ public class BookingStepDefinition {
 
     @Then("el usuario admin elimina la reserva")
     public void elUsuarioAdminEliminaLaReserva() {
-        
+        admin.attemptsTo(DeleteBooking.ofBooking());
     }
 
     @Then("el sistema debera de traer la reserva cuando la busca con filtro de checkin")
@@ -66,4 +69,6 @@ public class BookingStepDefinition {
     public void losDatosDeLaReservaActualizada() {
 
     }
+
+
 }

@@ -5,15 +5,17 @@ Feature: Servicio web de Gestion de reservas
 
    @HappyPaths
    Scenario Outline: Creacion, modificacion, busqueda y eliminacion de la misma reserva
-    Given que el usuario admin crea una reserva para un cliente llega el <checkin> y se va el <checkout> con un <additionalneeds>
-    When el usuario admin corrige el <lastname> del cliente
-    Then el sistema debera de traer la reserva cuando la busca con filtro de apellido
+    Given que el usuario admin crea una reserva para un cliente llega el "<checkin>" y se va el "<checkout>" con un "<additionalneeds>"
+    When el usuario admin corrige el "<name>" del cliente
+    Then el sistema debera de traer la reserva cuando la busca con filtro de nombre
     And  usando el BookingId
     Then el usuario admin elimina la reserva
-
      Examples:
-     |checkin|checkout|additionalneeds|lastname|
-     |"2023-02-02"|"2023-02-12"|"BreakFast"|"Marin|
+     |checkin|checkout|additionalneeds|name|
+     |2023-02-02|2023-02-12|BreakFast|Luis Carlos|
+    # |2021-12-02|2023-11-12|Rent Car|Lorenzo|
+   #  |2022-21-02|2023-02-10|Pool|Arya|
+
 
   @UnhappyPaths
   Scenario Outline: Creacion y busqueda de una reserva usando el nombre del cliente
@@ -24,7 +26,7 @@ Feature: Servicio web de Gestion de reservas
       |checkin|checkout|additionalneeds|
       |"2023-02-02"|"2023-02-12"|"BreakFast"|
 
-  @HappyPaths
+
   Scenario Outline: Creacion, busqueda de una reserva usando la fecha de checkin
     Given que el usuario admin crea una reserva para un cliente llega el <checkin> y se va el <checkout> con un <additionalneeds>
     Then el sistema debera de traer la reserva cuando la busca con filtro de checkin

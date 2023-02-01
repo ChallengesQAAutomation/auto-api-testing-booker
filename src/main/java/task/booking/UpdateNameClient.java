@@ -1,7 +1,9 @@
 package task.booking;
 
+import io.restassured.http.Cookie;
 import model.Booking.request.RequestBooking;
 import model.Booking.response.ResponseBooking;
+import model.Booking.response.update.ResponseBookingUpdate;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -13,14 +15,15 @@ import org.apache.logging.log4j.Logger;
 
 import static io.restassured.path.json.JsonPath.from;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static util.Contants.BOOKINGID;
-import static util.Contants.RESPONSE_BOOKING;
+import static util.Contants.*;
 
 public class UpdateNameClient implements Task {
 
-    ResponseBooking responseBooking;
-    String response,name="Luis",requestBooking="";
+    ResponseBookingUpdate responseBooking;
+    String response,name="Luis",requestBooking="",token;
     Integer bookingId;
+    Cookie cookie;
+
     public UpdateNameClient() {
     }
 
@@ -37,18 +40,22 @@ public class UpdateNameClient implements Task {
 
     public <T extends Actor> void performAs(T actor) {
 
-        requestBooking ="{" + "\"firstname\":\""+name+"}";
+        requestBooking ="{\n" +
+                "    \"firstname\" : \""+name+"\""+
+                "}";
+        bookingId=actor.recall(BOOKINGID);
+        token=actor.recall(TOKEN);
+        cookie = new Cookie.Builder("token", token).build();
         actor.attemptsTo(
-                Patch.to("/booking")
-                        .with(request -> request.header("Content-Type", "application/json")
-                                .body(requestBooking)
+                Patch.to("/booking/"+bookingId)
+                        .with(requestSpec -> requestSpec.
+                                cookie(cookie).
+                                header("Content-Type", "application/json")
+                               .body(requestBooking).log().all()
                         )
         );
         response= SerenityRest.lastResponse().asString();
-        responseBooking= from(response).getObject("",ResponseBooking.class);
-        bookingId=actor.recall(BOOKINGID);
-        actor.attemptsTo(Ensure.that(responseBooking.getBookingid()).isEqualTo(bookingId));
-        actor.remember(RESPONSE_BOOKING,responseBooking);
+        responseBooking= from(response).getObject("",ResponseBookingUpdate.class);
         logger.info("Actualizado el nombre de la reserva");
 
     }
