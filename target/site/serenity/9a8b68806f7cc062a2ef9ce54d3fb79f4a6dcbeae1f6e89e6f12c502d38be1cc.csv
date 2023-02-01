@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
+"Verificador de la salud de los servicios","Verficar que lo servicios funcionen correctamente","SUCCESS","2023-01-31T21:34:08.436659-05:00[America/Bogota]","0.0","10.81"
 "Servicio web de Gestion de reservas","Creacion y busqueda de una reserva usando el nombre del cliente","PENDING","2023-01-31T20:40:15.394176-05:00[America/Bogota]","0.0","0.04"
 "Servicio web de Gestion de reservas","Actualizacion total de reserva para cliente","SUCCESS","2023-01-31T20:40:15.527679-05:00[America/Bogota]","0.0","0.04"
