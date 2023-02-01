@@ -57,5 +57,6 @@ public class BookingStepDefinition {
 
     @Then("Los datos de la reserva actualizada")
     public void losDatosDeLaReservaActualizada() {
+
     }
 }
