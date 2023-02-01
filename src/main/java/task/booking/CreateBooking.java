@@ -13,8 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 import static io.restassured.path.json.JsonPath.from;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static util.Contants.BOOKINGID;
-import static util.Contants.TOKEN;
+import static util.Contants.*;
 
 public class CreateBooking implements Task {
     RequestBooking requestBooking;
@@ -53,6 +52,7 @@ public class CreateBooking implements Task {
         response= SerenityRest.lastResponse().asString();
         responseBooking= from(response).getObject("",ResponseBooking.class);
         actor.remember(BOOKINGID,responseBooking.getBookingid());
+        actor.remember(RESPONSE_BOOKING,responseBooking);
         logger.info("Created Booking");
 
     }

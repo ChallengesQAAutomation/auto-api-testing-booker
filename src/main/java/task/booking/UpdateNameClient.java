@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import static io.restassured.path.json.JsonPath.from;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static util.Contants.BOOKINGID;
+import static util.Contants.RESPONSE_BOOKING;
 
 public class UpdateNameClient implements Task {
 
@@ -47,6 +48,7 @@ public class UpdateNameClient implements Task {
         responseBooking= from(response).getObject("",ResponseBooking.class);
         bookingId=actor.recall(BOOKINGID);
         actor.attemptsTo(Ensure.that(responseBooking.getBookingid()).isEqualTo(bookingId));
+        actor.remember(RESPONSE_BOOKING,responseBooking);
         logger.info("Actualizado el nombre de la reserva");
 
     }

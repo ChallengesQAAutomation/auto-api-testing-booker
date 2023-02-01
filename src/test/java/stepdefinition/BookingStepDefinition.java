@@ -4,6 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import task.booking.FindById;
+import task.booking.FindByName;
 import task.booking.UpdateNameClient;
 
 import static stepdefinition.SetupStepDefinition.admin;
@@ -16,6 +18,7 @@ public class BookingStepDefinition {
     }
     @Then("el sistema debera de traer la reserva cuando la busca con filtro de nombre")
     public void elSistemaDeberaDeTraerLaReservaCuandoLaBuscaConFiltroDeNombre() {
+        admin.attemptsTo(FindByName.ofClient());
 
     }
 
@@ -31,7 +34,7 @@ public class BookingStepDefinition {
 
     @And("usando el BookingId")
     public void usandoElBookingId() {
-        
+        admin.attemptsTo(FindById.ofBooking());
     }
 
     @Then("el usuario admin elimina la reserva")
