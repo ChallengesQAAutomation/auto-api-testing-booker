@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 public class BookingStepDefinition {
     @Given("que el usuario admin crea una reserva para un cliente llega el (.*) y se va el (.*) con un (.*)")
     public void queElUsuarioAdminCreaUnaReservaParaUnClienteLlegaElCheckinYSeVaElCheckoutConUnAdditionalneeds(String checkin,String checkout,String additionalneeds) {
+
     }
 
 
