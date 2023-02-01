@@ -49,3 +49,42 @@ src/main/java/model
 ````
 src/main/java/util
 ````
+
+# Run Test
+
+## Run Regression Testing
+
+ - HappyPath y UnHappyPath
+
+> 9 caso de prueba, duración aproximada de la ejecución ⏱️ 40 segundos.
+
+````
+gradle regression aggregate
+````
+
+- HappyPath
+> 7 caso de prueba, duración aproximada de la ejecución ⏱️ 30 segundos.
+
+````
+gradle clean HappyPaths aggregate
+````
+
+- UnHappyPath
+> 2 caso de prueba, duración aproximada de la ejecución ⏱️ 10 segundos.
+
+````
+gradle clean UnhappyPaths aggregate
+````
+
+
+## Ver reportes
+
+> report
+```
+/auto-api-testing/target/site/serenity/serenity-summary.html
+```
+
+> aggregate
+```
+/auto-api-testing/target/site/serenity/index.html
+```

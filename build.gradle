@@ -104,4 +104,4 @@ serenity {
 
 gradle.startParameter.continueOnFailure = true
 
-test.finalizedBy(aggregate)
+regression.finalizedBy(aggregate)
