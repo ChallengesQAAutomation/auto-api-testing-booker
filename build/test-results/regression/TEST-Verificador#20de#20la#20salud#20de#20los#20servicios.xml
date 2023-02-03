@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Verificador de la salud de los servicios" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-01T05:37:32" hostname="MacBook-Pro-de-MacBook.local" time="0.532">
+  <properties/>
+  <testcase name="Verficar que lo servicios funcionen correctamente" classname="Verificador de la salud de los servicios" time="0.532"/>
+  <system-out><![CDATA[2023-02-01T00:37:32,143 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:32,632 [Test worker] INFO  (HealthCheck.java:29) - PING......
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/HealthCheck.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Verficar que lo servicios funcionen correctamente(verificador-de-la-salud-de-los-servicios;verficar-que-lo-servicios-funcionen-correctamente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Verficar que lo servicios funcionen correctamente
+----------------------------------------------------------------------
+]]></system-err>
+</testsuite>

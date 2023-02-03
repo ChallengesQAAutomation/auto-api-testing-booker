@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Servicio web de Gestion de reservas</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Servicio web de Gestion de reservas</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Servicio web de Gestion de reservas</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">36.468s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Actualizacion total de reserva para cliente</td>
+<td class="success">0.666s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion y busqueda de una reserva usando el apellido del cliente</td>
+<td class="success">1.599s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion, busqueda de una reserva usando la fecha de checkin #1</td>
+<td class="success">2.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion, busqueda de una reserva usando la fecha de checkin #2</td>
+<td class="success">1.756s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion, busqueda de una reserva usando la fecha de checkin #3</td>
+<td class="success">1.805s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion, modificacion, busqueda y eliminacion de la misma reserva #1</td>
+<td class="success">22.210s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion, modificacion, busqueda y eliminacion de la misma reserva #2</td>
+<td class="success">3.177s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Creacion, modificacion, busqueda y eliminacion de la misma reserva #3</td>
+<td class="success">3.218s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-02-01 00:37:01,569 Test worker ERROR The parameter is null: filePattern
+2023-02-01 00:37:01,572 Test worker ERROR Could not create plugin of type class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile org.apache.logging.log4j.core.config.ConfigurationException: Arguments given for element RollingFile are invalid: field 'filePattern' has invalid value 'null'
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.injectFields(PluginBuilder.java:199)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:123)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:1133)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:1058)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:1050)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:659)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:257)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:303)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:621)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:694)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:711)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:253)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:155)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
+	at stepdefinition.SetupStepDefinition.&lt;clinit&gt;(SetupStepDefinition.java:14)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at net.serenitybdd.cucumber.util.StepDefinitionAnnotationReader.annotationsIn(StepDefinitionAnnotationReader.java:101)
+	at net.serenitybdd.cucumber.util.StepDefinitionAnnotationReader.getScreenshotPreferences(StepDefinitionAnnotationReader.java:46)
+	at io.cucumber.core.plugin.SerenityReporter.handleTestStepStarted(SerenityReporter.java:327)
+	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:62)
+	at io.cucumber.core.runner.TestStep.emitTestStepStarted(TestStep.java:74)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:52)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:110)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:110)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)
+	at io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:58)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.CucumberSerenityRunner$RunCucumber.evaluate(CucumberSerenityRunner.java:287)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+2023-02-01 00:37:01,582 Test worker ERROR Null object returned for RollingFile in Appenders.
+2023-02-01 00:37:01,583 Test worker ERROR Unable to locate appender &quot;DailyRollingAppender&quot; for logger config &quot;root&quot;
+2023-02-01T00:37:02,365 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:03,518 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:13,907 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+Request method:	PATCH
+Request URI:	https://restful-booker.herokuapp.com/booking/4987
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		token=e70a5491eb5ea36
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;firstname&quot;: &quot;Joaquin&quot;
+}
+2023-02-01T00:37:14,690 [Test worker] INFO  (UpdateNameClient.java:56) - Actualizado el nombre de la reserva
+2023-02-01T00:37:15,535 [Test worker] INFO  (FindByName.java:38) - Buscando por nombre......
+2023-02-01T00:37:16,168 [Test worker] INFO  (FindById.java:35) - Buscando por id......
+2023-02-01T00:37:16,730 [Test worker] INFO  (DeleteBooking.java:48) - eliminada la reserva
+2023-02-01T00:37:16,761 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:16,773 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:17,834 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+Request method:	PATCH
+Request URI:	https://restful-booker.herokuapp.com/booking/5042
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		token=33233759136b4dc
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;firstname&quot;: &quot;Lorenzo&quot;
+}
+2023-02-01T00:37:18,371 [Test worker] INFO  (UpdateNameClient.java:56) - Actualizado el nombre de la reserva
+2023-02-01T00:37:18,900 [Test worker] INFO  (FindByName.java:38) - Buscando por nombre......
+2023-02-01T00:37:19,404 [Test worker] INFO  (FindById.java:35) - Buscando por id......
+2023-02-01T00:37:19,914 [Test worker] INFO  (DeleteBooking.java:48) - eliminada la reserva
+2023-02-01T00:37:19,937 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:19,942 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:21,107 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+Request method:	PATCH
+Request URI:	https://restful-booker.herokuapp.com/booking/5091
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		token=357c9de5f45cc5b
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;firstname&quot;: &quot;Arya&quot;
+}
+2023-02-01T00:37:21,636 [Test worker] INFO  (UpdateNameClient.java:56) - Actualizado el nombre de la reserva
+2023-02-01T00:37:22,145 [Test worker] INFO  (FindByName.java:38) - Buscando por nombre......
+2023-02-01T00:37:22,637 [Test worker] INFO  (FindById.java:35) - Buscando por id......
+2023-02-01T00:37:23,133 [Test worker] INFO  (DeleteBooking.java:48) - eliminada la reserva
+2023-02-01T00:37:23,158 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:23,162 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:24,167 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+2023-02-01T00:37:24,731 [Test worker] INFO  (DeleteBooking.java:48) - eliminada la reserva
+2023-02-01T00:37:24,806 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:24,829 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:25,986 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+2023-02-01T00:37:26,763 [Test worker] INFO  (FindByCheckin.java:35) - Buscando por fecha de llegada......
+2023-02-01T00:37:26,789 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:26,796 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:27,813 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+2023-02-01T00:37:28,525 [Test worker] INFO  (FindByCheckin.java:35) - Buscando por fecha de llegada......
+2023-02-01T00:37:28,541 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:28,547 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+2023-02-01T00:37:29,566 [Test worker] INFO  (CreateBooking.java:56) - Created Booking
+2023-02-01T00:37:30,330 [Test worker] INFO  (FindByCheckin.java:35) - Buscando por fecha de llegada......
+2023-02-01T00:37:30,479 [Test worker] INFO  (SetupStepDefinition.java:18) - 
+ Running......Env 
+ null con la Base Url 
+ https://restful-booker.herokuapp.com 
+2023-02-01T00:37:30,484 [Test worker] INFO  (AuthToken.java:31) - Auth Token................
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Creacion, modificacion, busqueda y eliminacion de la misma reserva(servicio-web-de-gestion-de-reservas;creacion--modificacion--busqueda-y-eliminacion-de-la-misma-reserva)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Creacion, modificacion, busqueda y eliminacion de la misma reserva
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Creacion, modificacion, busqueda y eliminacion de la misma reserva
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Creacion y busqueda de una reserva usando el apellido del cliente(servicio-web-de-gestion-de-reservas;creacion-y-busqueda-de-una-reserva-usando-el-apellido-del-cliente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Creacion y busqueda de una reserva usando el apellido del cliente
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Creacion, busqueda de una reserva usando la fecha de checkin(servicio-web-de-gestion-de-reservas;creacion--busqueda-de-una-reserva-usando-la-fecha-de-checkin)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Creacion, busqueda de una reserva usando la fecha de checkin
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Creacion, busqueda de una reserva usando la fecha de checkin
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///Users/luiscarlosmarca/Documents/personales/Desafio%20Tecnico%20Yape/DesafioYape/auto-api-testing-booker/src/test/resources/features/JourneyCustomer.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Actualizacion total de reserva para cliente(servicio-web-de-gestion-de-reservas;actualizacion-total-de-reserva-para-cliente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Actualizacion total de reserva para cliente
+----------------------------------------------------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 1/02/2023, 12:37:32 a. m.</p>
+</div>
+</div>
+</body>
+</html>
