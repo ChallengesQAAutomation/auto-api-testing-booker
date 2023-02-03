@@ -18,9 +18,9 @@
 *.zip
 *.tar.gz
 *.rar
-.gradle
+
 .idea
-build
+
 target/*
 /target
 /history
