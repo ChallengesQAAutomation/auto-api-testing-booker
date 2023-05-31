@@ -1,6 +1,11 @@
 # Automatizacion de pruebas API BOOKER
+Este proyecto de automatización se enfoca en realizar pruebas de regresión a una API REST. Utiliza Java como lenguaje base y se apoya en las siguientes herramientas y patrones:
 
-Desafio de pruebas automatizadas.
+Serenity BDD: una biblioteca que facilita la automatización de pruebas y la generación de reportes detallados.
+Cucumber: una herramienta de especificación y prueba basada en lenguaje natural que permite escribir escenarios de prueba en un formato fácilmente comprensible.
+Patrón Screenplay: un enfoque de diseño de pruebas que promueve la legibilidad, el mantenimiento y la reutilización del código.
+El informe completo de la ejecución de las pruebas se encuentra disponible en el siguiente enlace: [enlace al informe](URL del informe). En el informe podrán encontrar todos los detalles sobre las pruebas realizadas, sus resultados y cualquier otra información relevante para el proyecto.
+[Ver resultados de la ejecución](target/site/serenity/index.html)
 
 ## Requerimientos
 - Java
@@ -88,5 +93,5 @@ gradle clean UnhappyPaths aggregate
 ```
 ./target/site/serenity/index.html
 ```
-[Enlace a los resultados de Serenity](target/site/serenity/index.html)
+
 
