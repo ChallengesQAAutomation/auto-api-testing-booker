@@ -9,7 +9,7 @@ El informe completo de la ejecución de las pruebas se encuentra disponible en e
 [Ver resultados de la ejecución](target/site/serenity/index.html)
 
 En el informe podrán encontrar todos los detalles sobre las pruebas realizadas, sus resultados y cualquier otra información relevante para el proyecto.
-
+[Ver más proyectos]([target/site/serenity/index.html](https://luiscarlosmarca.github.io/intro-project/intro.html))
 
 ## Requerimientos
 - Java
