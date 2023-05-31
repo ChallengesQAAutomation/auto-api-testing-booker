@@ -11,7 +11,7 @@ El informe completo de la ejecución de las pruebas se encuentra disponible en e
 En el informe podrán encontrar todos los detalles sobre las pruebas realizadas, sus resultados y cualquier otra información relevante para el proyecto.
 ## [Ver repositorio](https://github.com/ChallengesQAAutomation/auto-api-testing-booker)
 
-## [Ver más proyectos]([target/site/serenity/index.html](https://luiscarlosmarca.github.io/intro-project/intro.html))
+## [Ver más proyectos](https://luiscarlosmarca.github.io/intro-project/intro.html)
 
 ## Requerimientos
 - Java
