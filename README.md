@@ -23,6 +23,15 @@ En el informe podrán encontrar todos los detalles sobre las pruebas realizadas,
 serenityCoreVersion = "3.3.10"
 ## Instalacion
 
+### Clonar repositorio
+
+```
+git clone https://github.com/ChallengesQAAutomation/auto-api-testing-booker.git
+```
+
+### Descargar dependencias
+Ingresar a la raiz de la carpeta del proyecto, abrir una terminal e ingresar el siguiente comando
+
 ```
 gradle build
 ```
@@ -36,6 +45,7 @@ Patron de diseño Screnplay usando serenity BDD
 ```
 src/test/java/stepdefinition/SetupStepDefinition.java
 ```
+
 - Features: Escnarios de pruebas
 ````
 src/test/resources/features
@@ -61,7 +71,7 @@ src/main/java/model
 src/main/java/util
 ````
 
-# Run Test
+## Run Test
 
 ## Run Regression Testing
 
